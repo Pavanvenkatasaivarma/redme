@@ -65,47 +65,14 @@ The Intelligence_Identity System is a Flask-based web application designed to ad
 2. **Access the Web Interface**:
    Open your web browser and navigate to `http://127.0.0.1:5000/`.
 
-## Core Functionality Development: 
-
-### Home Page
-- Navigate to `/` to access the main interface (`details.html`).
-
-### Full Network Tree
-- Go to `/full_tree` to view the complete network of entities, events, and identity resolutions.
-
-### Drill-Down Analysis
-- Visit `/drilldown` for a detailed view of nodes and their attributes, with a search bar for easy navigation.
-
-### Red Flag Detection
-- Access `/red_flags` to see a graph highlighting critical conditions (e.g., high-severity events).
-
-### Preventive Maintenance Scheduling
-- Navigate to `/maintenance`:
-  - Submit a natural language query (e.g., "Visualize maintenance schedule for entities") via POST request.
-  - View the resulting graph at `static/visualize.html`.
-
-### Dynamic Table View
-- Go to `/table`:
-  - Use GET (`?table=entities`) or POST (`table=entities`) to display data from a specific table.
-
-### User Interactions
-- **Full Tree**: `http://127.0.0.1:5000/full_tree`
-- **Drill-Down**: `http://127.0.0.1:5000/drilldown`
-- **Red Flags**: `http://127.0.0.1:5000/red_flags`
-- **Maintenance Query**: Submit "Show network of events" via `/maintenance` form.
-- **Table View**: `http://127.0.0.1:5000/table?table=relationships`
-
-## Code Structure
-
-- **app.py**: The main Flask application file containing routes, query processing, and visualization logic.
-- **templates/**: Directory for HTML templates (`details.html`, `full_tree.html`, `drilldown.html`, `red_flags.html`, `maintenance.html`, `table.html`, etc.).
-- **static/**: Directory for storing static files like `full.html`, `drill.html`, `red.html`, and `visualize.html`.
 
 ## Technical Architecture and Flow
 
 The architecture of the Intelligence_Identity System is designed to separate frontend and backend concerns, ensuring a modular and scalable application. Below is the architecture diagram and a description of the flow:
 
 ![Architecture](https://github.com/user-attachments/assets/8a123cd6-34ef-4945-8a9a-2d02706ce8c6)
+
+
 
 ## Demo Video:
 
@@ -128,6 +95,9 @@ The following video provides a demonstration of the Intelligence_Identity System
 | 6       | **Flask**           | A lightweight web framework for building the application’s web interface and routes. |
 | 7       | **GIt**             | Version control system for managing the project’s codebase. |
 | 8       | **Python 3.8+**     | The programming language used for developing the application. |
+
+
+
 
 
 
