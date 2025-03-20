@@ -74,7 +74,7 @@ The architecture of the Intelligence_Identity System is designed to separate fro
 
 
 
-## Demo Video:
+## Video Reference for Intelligence Identity:
 
 The following video provides a demonstration of the Intelligence_Identity System, showcasing its key features such as interactive graph visualization, red flag detection, and natural language query processing:
 
