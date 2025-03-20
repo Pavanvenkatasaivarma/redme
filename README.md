@@ -1,37 +1,15 @@
 
 
 # README.md
+## Problem Statement
 
-## Project Overview
+Analyzing and visualizing complex network data, such as entities, events, relationships, and identity resolutions, can be challenging due to the volume and interconnected nature of the data. Traditional methods often lack the ability to process natural language queries, provide interactive visualizations, or highlight critical conditions (e.g., high-severity events or low-confidence identity resolutions). Additionally, there is a need for a user-friendly web interface that allows users to explore network data through multiple views, such as full network trees, detailed drill-downs, and dynamic tables, while also supporting preventive maintenance scheduling for proactive analysis.
 
-This project is a Flask-based web application designed to visualize and analyze network data stored in an ArangoDB database. It integrates LangChain and GROQ for natural language query processing, translating queries into ArangoDB Query Language (AQL), and uses NetworkX and Pyvis for interactive graph visualizations. The application supports multiple views, including a full network tree, drill-down analysis, red flag detection, and preventive maintenance scheduling, making it a versatile tool for exploring entity relationships, events, and identity resolutions.
+## Solution Proposed 
 
-## Features
+The Intelligence_Identity System is a Flask-based web application designed to address these challenges by providing a comprehensive platform for visualizing and analyzing network data stored in an ArangoDB database. The solution integrates LangChain and GROQ for natural language query processing, translating user queries into ArangoDB Query Language (AQL) for seamless data retrieval. It leverages NetworkX and Pyvis for interactive graph visualizations, offering multiple views like full network trees, drill-down analysis, and red flag detection for critical conditions. The application also supports preventive maintenance scheduling and dynamic table views, making it a versatile tool for exploring and managing network data.
 
-| Sl. No. | Feature Name                            | Description |
-|---------|-----------------------------------------|-------------|
-| 1       | **Natural Language Query Processing**   | Translates natural language queries into AQL using LangChain and GROQ, executing them on ArangoDB. |
-| 2       | **Interactive Graph Visualization**     | Displays network data (entities, events, relationships) as interactive graphs using Pyvis and NetworkX. |
-| 3       | **Red Flag Detection**                  | Identifies critical conditions (e.g., high-severity events, low-confidence identity resolutions) with customizable thresholds. |
-| 4       | **Drill-Down View**                     | Provides a detailed view of nodes and their attributes, with a search bar for navigation. |
-| 5       | **Full Network Tree**                   | Visualizes the entire network of entities, events, and identity resolutions in a single graph. |
-| 6       | **Preventive Maintenance Scheduling**   | Generates visualizations for maintenance schedules based on user queries. |
-| 7       | **Dynamic Table View**                  | Displays database table data dynamically based on user selection. |
-
-
-## Architecture 
-
-![Architecture](https://github.com/user-attachments/assets/1b9a7f30-8fd3-4280-82c9-a4d319c492a8)
-
-
-## Prerequisites
-
-Before running the application, ensure you have the following installed:
-
-- Python 3.8 or higher
-- ArangoDB (running locally or accessible via a network)
-- GROQ API key
-- Git (for version control)
+## Implementation Approach
 
 ## Installation
 
@@ -87,7 +65,7 @@ Before running the application, ensure you have the following installed:
 2. **Access the Web Interface**:
    Open your web browser and navigate to `http://127.0.0.1:5000/`.
 
-## Usage
+## Core Functionality Development: 
 
 ### Home Page
 - Navigate to `/` to access the main interface (`details.html`).
@@ -110,7 +88,7 @@ Before running the application, ensure you have the following installed:
 - Go to `/table`:
   - Use GET (`?table=entities`) or POST (`table=entities`) to display data from a specific table.
 
-### Example Interactions
+### User Interactions
 - **Full Tree**: `http://127.0.0.1:5000/full_tree`
 - **Drill-Down**: `http://127.0.0.1:5000/drilldown`
 - **Red Flags**: `http://127.0.0.1:5000/red_flags`
@@ -123,7 +101,22 @@ Before running the application, ensure you have the following installed:
 - **templates/**: Directory for HTML templates (`details.html`, `full_tree.html`, `drilldown.html`, `red_flags.html`, `maintenance.html`, `table.html`, etc.).
 - **static/**: Directory for storing static files like `full.html`, `drill.html`, `red.html`, and `visualize.html`.
 
-## Technology Stack
+## Technical Architecture and Flow
+
+The architecture of the Intelligence_Identity System is designed to separate frontend and backend concerns, ensuring a modular and scalable application. Below is the architecture diagram and a description of the flow:
+
+![Architecture](https://github.com/user-attachments/assets/8a123cd6-34ef-4945-8a9a-2d02706ce8c6)
+
+## Demo Video:
+
+The following video provides a demonstration of the Intelligence_Identity System, showcasing its key features such as interactive graph visualization, red flag detection, and natural language query processing:
+
+
+
+
+
+
+## Technology Used
 
 | Sl. No. | Technology          | Description |
 |---------|---------------------|-------------|
@@ -133,6 +126,33 @@ Before running the application, ensure you have the following installed:
 | 4       | **NetworkX**        | A Python library for creating and manipulating graph structures. |
 | 5       | **Pyvis**           | A library for generating interactive network visualizations rendered in HTML. |
 | 6       | **Flask**           | A lightweight web framework for building the application’s web interface and routes. |
+| 7       | **GIt**             | Version control system for managing the project’s codebase. |
+| 8       | **Python 3.8+**     | The programming language used for developing the application. |
+
+
+
+## Features
+
+| Sl. No. | Feature Name                            | Description |
+|---------|-----------------------------------------|-------------|
+| 1       | **Natural Language Query Processing**   | Translates natural language queries into AQL using LangChain and GROQ, executing them on ArangoDB. |
+| 2       | **Interactive Graph Visualization**     | Displays network data (entities, events, relationships) as interactive graphs using Pyvis and NetworkX. |
+| 3       | **Red Flag Detection**                  | Identifies critical conditions (e.g., high-severity events, low-confidence identity resolutions) with customizable thresholds. |
+| 4       | **Drill-Down View**                     | Provides a detailed view of nodes and their attributes, with a search bar for navigation. |
+| 5       | **Full Network Tree**                   | Visualizes the entire network of entities, events, and identity resolutions in a single graph. |
+| 6       | **Preventive Maintenance Scheduling**   | Generates visualizations for maintenance schedules based on user queries. |
+| 7       | **Dynamic Table View**                  | Displays database table data dynamically based on user selection. |
+
+
+
+## Prerequisites
+
+Before running the application, ensure you have the following installed:
+
+- Python 3.8 or higher
+- ArangoDB (running locally or accessible via a network)
+- GROQ API key
+- Git (for version control)
 
 ## Contributing
 
