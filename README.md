@@ -63,17 +63,27 @@ The Intelligence_Identity System is a Flask-based web application designed to ad
 ## Core Functionality Development
 
    1.Implement Flask routes for different views:
-      /full_tree: Displays the entire network graph of entities, events, and relationships.
-      /drilldown: Provides a detailed view of nodes with a search bar for navigation.
-      /red_flags: Highlights critical conditions using customizable thresholds.
-      /maintenance: Processes natural language queries for maintenance scheduling visualizations.
-      /table: Dynamically displays database table data based on user selection.
+      1./full_tree: Displays the entire network graph of entities, events, and relationships.
+      2./drilldown: Provides a detailed view of nodes with a search bar for navigation.
+      3./red_flags: Highlights critical conditions using customizable thresholds.
+      4./maintenance: Processes natural language queries for maintenance scheduling visualizations.
+      5./table: Dynamically displays database table data based on user selection.
    2.Use NetworkX to construct graphs and Pyvis to render interactive visualizations, saving them as HTML files in the static/ directory.
 
 ## User Interface
 
    1.Develop HTML templates (details.html, full_tree.html, drilldown.html, etc.) in the templates/ directory to provide a user-friendly web interface.
    2.Add features like search bars, toggle buttons for red flags, and form submissions for natural language queries.
+
+## Running the Application
+
+   1. **Start the Flask Application**:
+      ```bash
+      python app.py
+      ```
+   
+   2. **Access the Web Interface**:
+      Open your web browser and navigate to `http://127.0.0.1:5000/`.
 
 ## Testing and Deployment
 
@@ -84,20 +94,6 @@ The Intelligence_Identity System is a Flask-based web application designed to ad
    git commit -m "Initial commit of Intelligence_Identity System"
    git push origin main
    ```
-
-
-
-## Running the Application
-
-1. **Start the Flask Application**:
-   ```bash
-   python app.py
-   ```
-
-2. **Access the Web Interface**:
-   Open your web browser and navigate to `http://127.0.0.1:5000/`.
-
-Data Integration
 
 
 ## Technical Architecture and Flow
