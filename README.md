@@ -55,6 +55,38 @@ The Intelligence_Identity System is a Flask-based web application designed to ad
    db = client.db("_system", username="root", password="")
    ```
 
+## Data Integration
+
+   1.Connect to ArangoDB to fetch data from collections (Entities, Events, Relationships, Identity-Resolution).
+   2.Use LangChain and GROQ to translate natural language queries into AQL for querying the database.
+
+## Core Functionality Development
+
+   1.Implement Flask routes for different views:
+      /full_tree: Displays the entire network graph of entities, events, and relationships.
+      /drilldown: Provides a detailed view of nodes with a search bar for navigation.
+      /red_flags: Highlights critical conditions using customizable thresholds.
+      /maintenance: Processes natural language queries for maintenance scheduling visualizations.
+      /table: Dynamically displays database table data based on user selection.
+   2.Use NetworkX to construct graphs and Pyvis to render interactive visualizations, saving them as HTML files in the static/ directory.
+
+## User Interface
+
+   1.Develop HTML templates (details.html, full_tree.html, drilldown.html, etc.) in the templates/ directory to provide a user-friendly web interface.
+   2.Add features like search bars, toggle buttons for red flags, and form submissions for natural language queries.
+
+## Testing and Deployment
+
+   **Access the web interface at http://127.0.0.1:5000/.**
+   **Push the code to a GitHub repository for version control and collaboration:**
+   ```bash
+   git add .
+   git commit -m "Initial commit of Intelligence_Identity System"
+   git push origin main
+   ```
+
+
+
 ## Running the Application
 
 1. **Start the Flask Application**:
@@ -64,6 +96,8 @@ The Intelligence_Identity System is a Flask-based web application designed to ad
 
 2. **Access the Web Interface**:
    Open your web browser and navigate to `http://127.0.0.1:5000/`.
+
+Data Integration
 
 
 ## Technical Architecture and Flow
