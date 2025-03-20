@@ -1,11 +1,7 @@
 
 
 # README.md
-
-## Architecture 
-
-![Architecture](https://github.com/user-attachments/assets/1b9a7f30-8fd3-4280-82c9-a4d319c492a8)
-
+## Intelligence-Identity 
 
 ## Project Overview
 
@@ -22,6 +18,7 @@ This project is a Flask-based web application designed to visualize and analyze 
 | 5       | **Full Network Tree**                   | Visualizes the entire network of entities, events, and identity resolutions in a single graph. |
 | 6       | **Preventive Maintenance Scheduling**   | Generates visualizations for maintenance schedules based on user queries. |
 | 7       | **Dynamic Table View**                  | Displays database table data dynamically based on user selection. |
+
 
 
 
