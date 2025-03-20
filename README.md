@@ -58,16 +58,19 @@ The Intelligence_Identity System is a Flask-based web application designed to ad
 ## Data Integration
 
    1.Connect to ArangoDB to fetch data from collections (Entities, Events, Relationships, Identity-Resolution).
+
    2.Use LangChain and GROQ to translate natural language queries into AQL for querying the database.
 
 ## Core Functionality Development
 
    1.Implement Flask routes for different views:
+
       1./full_tree: Displays the entire network graph of entities, events, and relationships.
       2./drilldown: Provides a detailed view of nodes with a search bar for navigation.
       3./red_flags: Highlights critical conditions using customizable thresholds.
       4./maintenance: Processes natural language queries for maintenance scheduling visualizations.
       5./table: Dynamically displays database table data based on user selection.
+
    2.Use NetworkX to construct graphs and Pyvis to render interactive visualizations, saving them as HTML files in the static/ directory.
 
 ## User Interface
