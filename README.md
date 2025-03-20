@@ -2,6 +2,41 @@
 
 # README.md
 
+## Architecture 
+
+graph LR
+    %% Define styles for a distinct look
+    classDef frontend fill:#e6f3ff,stroke:#1a73e8,stroke-width:2px,color:#1a73e8;
+    classDef backend fill:#ffe6e6,stroke:#d32f2f,stroke-width:2px,color:#d32f2f;
+    classDef data fill:#e6ffe6,stroke:#388e3c,stroke-width:2px,color:#388e3c;
+    classDef arrow stroke:#666,stroke-width:2px;
+
+    %% Frontend Components
+    subgraph Frontend [Frontend Layer]
+        direction TB
+        A[User Interface - Flask Web App - Routes: /, /full_tree, /drilldown]:::frontend
+        B[AI Agent - LangChain & GROQ - Natural Language Processing]:::frontend
+        E[Visualization Engine - NetworkX & Pyvis - Interactive Graphs]:::frontend
+        A -->|User Input| B
+        A -->|Render Graphs| E
+        B -->|Visualization Requests| E
+    end
+
+    %% Backend Components
+    subgraph Backend [Backend Layer]
+        direction TB
+        C[Processing Unit - Python Logic - Query Translation, Graph Generation, Red Flags]:::backend
+        D[Database - ArangoDB - Entities, Events, Relationships]:::data
+        C -->|Fetch Data| D
+    end
+
+    %% Flow Connections
+    B -->|AQL Queries| C
+    C -->|Graph Data| E
+    E -->|Display Output| A
+
+    %% Styling for Arrows
+    linkStyle 0,1,2,3,4,5 stroke:#666,stroke-width:2px;
 
 ## Project Overview
 
